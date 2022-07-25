@@ -4,114 +4,39 @@
   <title></title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   </head>
-  <body> 
-   <table width="270px" cellspacing="0px" cellpadding="0px" border="1px">
-   <!-- cell 270px wide (8 columns x 60px) -->
-      <?php
 
-    $chess = [
-    "A" => [
-        "White",
-        "Black",
-        "White",
-        "Black",
-        "White",
-        "Black",
-        "White",
-        "Black"
-        
-    ],
-    "B" => [
-        "Black",
-        "White",
-        "Black",
-        "White",
-        "Black",
-        "White",
-        "Black",
-        "White",
-    ],
-    "C" => [
-        "White",
-        "Black",
-        "White",
-        "Black",
-        "White",
-        "Black",
-        "White",
-        "Black"
-    ],
-    "D" => [
-        "Black",
-        "White",
-        "Black",
-        "White",
-        "Black",
-        "White",
-        "Black",
-        "White",
-    ],
-    "E" => [
-        "White",
-        "Black",
-        "White",
-        "Black",
-        "White",
-        "Black",
-        "White",
-        "Black"
-    ],
-    "F" => [
-        "Black",
-        "White",
-        "Black",
-        "White",
-        "Black",
-        "White",
-        "Black",
-        "White",
-    ],
-    "G" => [
-        "White",
-        "Black",
-        "White",
-        "Black",
-        "White",
-        "Black",
-        "White",
-        "Black"
-    ],
-    "H" => [
-        "Black",
-        "White",
-        "Black",
-        "White",
-        "Black",
-        "White",
-        "Black",
-        "White",
-    ]
-];
-
-
-
-        foreach ($chess as $herf => $a) {
-            
-            echo "<tr>";
-            foreach ($a as $color => $c) {
-              echo "<td height=30px width=30px bgcolor=$c></td>";
-              
-            }
-            echo "</tr>";
-
+  <style>
+    body{
+        background-color: gray;
     }
-    echo "</ol>";
+  </style>
+  <body> 
+  <table>
+      <?php
+      for($row=1;$row<=8;$row++)
+	  {
+          
+          echo "<tr>";
+          echo "<td>$row";
+        for($col=1;$col<=8;$col++)
+        {
+            $total=$row+$col;
+            
 
-
+            if($total%2==0)
+            {
+                echo "<td height=35px width=30px bgcolor=#FFFFFF></td>";
+            }
+            else
+            {
+                echo "<td height=35px width=30px bgcolor=#000000></td>";
+            }
+        }
+        echo "</tr>";
+        echo "</td>";
+    }
           ?>
   </table>
-
-
 
 
   </body>
